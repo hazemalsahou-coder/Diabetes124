@@ -2,7 +2,7 @@
 
 📌 Project Overview
 
-This project focuses on predicting diabetes using machine learning models trained on the Pima Indians Diabetes Dataset.
+This project focuses on predicting diabetes using machine learning models trained on the Pima Indians Diabetes Dataset which I get from Kaggle.
 The goal is to build and compare multiple classification models and evaluate their performance using different metrics.
 
 This project is part of my journey into Machine Learning and AI in Healthcare.
