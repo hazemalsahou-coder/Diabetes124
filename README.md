@@ -1,93 +1,118 @@
-# Diabetes124
-Diabetes Prediction Using Logistic Regression
+🩺 Diabetes Prediction using Machine Learning
 
-Project Overview
+📌 Project Overview
 
-This project predicts whether a patient has diabetes using Machine Learning.
+This project focuses on predicting diabetes using machine learning models trained on the Pima Indians Diabetes Dataset.
+The goal is to build and compare multiple classification models and evaluate their performance using different metrics.
 
-The model is trained on the Pima Indians Diabetes Dataset and uses several medical measurements such as glucose level, blood pressure, BMI, insulin level, age, and pregnancy count.
+This project is part of my journey into Machine Learning and AI in Healthcare.
 
-Dataset Features
+---
+
+📊 Dataset
+
+The dataset contains medical diagnostic measurements such as:
 
 - Pregnancies
 - Glucose
-- BloodPressure
-- SkinThickness
+- Blood Pressure
+- Skin Thickness
 - Insulin
 - BMI
-- DiabetesPedigreeFunction
+- Diabetes Pedigree Function
 - Age
+- Outcome (0 = Non-diabetic, 1 = Diabetic)
 
-Target Variable
+---
 
-- Outcome
-  - 0 = Non-Diabetic
-  - 1 = Diabetic
+⚙️ Workflow
 
-Machine Learning Model
+1. Data Preprocessing
 
-The project uses:
+- Loaded dataset using Pandas
+- Defined features (X) and target (y)
+- Split data into training and testing sets
+
+2. Models Used
+
+The following machine learning models were trained and compared:
 
 - Logistic Regression
-- Balanced class weights to reduce class imbalance effects
-- Custom classification threshold (0.395)
+- Random Forest
+- Decision Tree
+- K-Nearest Neighbors (KNN)
+- XGBoost
 
-Workflow
+---
 
-1. Load the diabetes dataset
-2. Split data into training and testing sets
-3. Train a Logistic Regression model
-4. Predict diabetes probability
-5. Apply custom threshold (0.395)
-6. Evaluate model performance
+📈 Model Evaluation
 
-Libraries Used
+Models were evaluated using:
 
-numpy
-pandas
-scikit-learn
+- Accuracy Score
+- Cross Validation (5-Fold)
+- Confusion Matrix
+- Classification Report
+- ROC-AUC Score
 
-Results
+---
 
-Accuracy
+🏆 Best Model Performance
 
-68.83%
+- Best ROC-AUC Score: 0.81
+- Logistic Regression achieved competitive and stable performance across metrics.
 
-Confusion Matrix
+---
 
-[[63 41]
- [ 7 43]]
+🔍 Feature Importance
 
-Classification Report
+Using Random Forest, the most important features for diabetes prediction were:
 
-Precision (Diabetes): 0.51
-Recall (Diabetes): 0.86
-F1-score (Diabetes): 0.64
+- Glucose
+- BMI
+- Age
+- Diabetes Pedigree Function
 
-The model achieves high recall for diabetic patients, making it useful when identifying positive cases is more important than minimizing false positives.
+---
 
-Run the Project
+📊 Results Summary
 
-Clone the repository:
+Model| Accuracy| CV Score
+Logistic Regression| ~0.75| ~0.77
+Random Forest| ~0.72| ~0.76
+Decision Tree| ~0.74| ~0.71
+KNN| ~0.66| ~0.72
+XGBoost| ~0.72| ~0.74
 
-git clone https://github.com/your-username/diabetes-prediction.git
+---
 
-Install dependencies:
+📌 Key Insights
 
-pip install pandas numpy scikit-learn
+- Glucose level is the strongest predictor of diabetes.
+- Ensemble models improve stability.
+- ROC-AUC shows good discrimination ability (~0.81).
 
-Run the notebook or Python script.
+---
 
-Future Improvements
+🛠️ Technologies Used
 
-- Data preprocessing and normalization
-- Hyperparameter tuning
-- Cross-validation
-- Comparison with Random Forest and XGBoost
-- Deploy as a web application using Streamlit
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Scikit-learn
+- XGBoost
 
-Author
+---
 
-Hazem Alsahoo
+🚀 Future Improvements
 
-Medical Student interested in Artificial Intelligence and Medical AI.
+- Hyperparameter tuning (GridSearchCV)
+- Use of deep learning models
+- Deployment using Streamlit or Flask
+- Handling class imbalance techniques
+
+---
+Author:Hazem Aljasem Alsahou
+
+This project is part of my learning journey in Machine Learning and AI applied to healthcare.
